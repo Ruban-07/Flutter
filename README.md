@@ -621,3 +621,47 @@ Drawer(
   ),
 );
 ```
+
+## EndDrawer :
+
+The endDrawer is the panel displayed to the side of the body (Scaffold Widget). It is generally hidden in mobile devices. We can open it by swiping in from right to left, or we can customise it to open on-press of an icon or a button.
+
+```dart
+      endDrawer: Drawer(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text('This is the Drawer'),
+              ElevatedButton(
+                onPressed: _closeEndDrawer,
+                child: const Text('Close Drawer'),
+              ),
+            ],
+          ),
+        ),
+      ),
+```
+
+## Text Button :
+
+Text buttons are one of the key components of the graphical user interface. Text Buttons have a text on them that elaborates on the button's function. They allow users to take string inputs, look at choices, and make choices, all with a single tap.
+
+```dart
+TextButton(
+  style: TextButton.styleFrom(
+    foregroundColor: Colors.white,
+    padding: const EdgeInsets.all(16.0),
+    textStyle: const TextStyle(fontSize: 20),
+  ),
+  onPressed: () {},
+  child: const Text('Gradient'),
+),
+```
+
+## To change the statusBar color :
+
+```dart
+SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+```
